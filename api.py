@@ -5,7 +5,5 @@ url =f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_cu
 response = requests.get(url)
 print(response.json())
 data= response.json()
-print(type(data))
-data2=data["Realtime Currency Exchange Rate"]
-Exchange_rate=float(data2["5. Exchange Rate"])
+Exchange_rate=float(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
 print(Exchange_rate)
