@@ -14,7 +14,7 @@ def overheads():
         for file in reader:
             list.append(file[1])
             list.sort(key = float, reverse= True)
-        return list
+        print(list)
         # if list == reader("[Overheads]"):
         #     return reader
 
