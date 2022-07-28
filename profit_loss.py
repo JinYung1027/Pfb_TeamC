@@ -15,6 +15,6 @@ def profitloss():
         for line in reader:
             list.append(line[4])
         return list
-print("penis")
+
 
 print(profitloss())
