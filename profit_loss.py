@@ -14,10 +14,11 @@ def profitloss():
 
         for lines in reader:
             print(lines[4])
-
-
+            list.append(lines[4])          
         
-            ghhfdhgfdhd
+        for items in list:
+            difference = items - items
+             
 
 
 print(profitloss())
