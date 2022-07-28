@@ -12,10 +12,9 @@ def profitloss():
         reader = csv.reader(Path1)
         next(reader)
 
-        for line in reader:
-            list.append(line[4])
-        if list[1]>line[2]:
-            print("penis")
+        for lines in reader:
+            print(lines[4])
+
 
         
             
