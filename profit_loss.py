@@ -14,7 +14,8 @@ def profitloss():
 
         for line in reader:
             list.append(line[4])
-        if list
+        if list[1]>line[2]:
+            print("penis")
 
         
             
