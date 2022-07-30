@@ -1,10 +1,11 @@
 from pathlib import Path
 import csv
 
-print(Path.cwd())
+# print(Path.cwd())
 Path = Path.cwd()/"csv_report"/"Profit and Loss.csv"
-print(Path.exists())
+# print(Path.exists())
 list = []
+lanjiao = []
 
 def profitloss():
 
@@ -13,12 +14,54 @@ def profitloss():
         next(reader)
 
         for lines in reader:
-            print(lines[4])
-            list.append(lines[4])          
+            penis = float(lines[4])
+            list.append(penis)
+        print(list)
         
-        for items in list:
-            difference = items - items
-             
+        count = 0
+        for profit in list:
+            balls = (list[count]-list[count-1])
+            count += 1             
+            
+            if balls != list[0]-list[-1]:
+                lanjiao.append(balls)
+        print(lanjiao)
+
+        for items in lanjiao:
+            if items>0:
+                Profit = "Surplus"
+            else:
+                Profit = "Deficit"
+                
+                if Profit == "Deficit":
+                    print("penis")
+
+                else:
+                    print("penis2")
+
+                
+                
+                
+                   
+                    
+                #    return("[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY]")
+                
+        
+
+
+
+        # count = 0
+        # for profit in list:
+        #     print(list[count])
+            
+
+
+        #   list = float(list)
+        #   difference = list[count]-list[count-1]
+        #   print(difference)
+        # print(list[count])
+          
+
 
 
 print(profitloss())
