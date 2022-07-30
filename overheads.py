@@ -10,11 +10,10 @@ def Overheads():
         reader = csv.reader(data)
         next(reader)
 
-        for file in reader:
-            list.append(file[1])
-            list.sort(key= float, reverse = True)
+        
+        
 
-        return list
+    
 
 
 print(Overheads())
