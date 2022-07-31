@@ -5,7 +5,10 @@ import csv
 Path = Path.cwd()/"csv_report"/"Profit and Loss.csv"
 # print(Path.exists())
 list = []
-lanjiao = []
+listdiff = []
+negative = []
+positive = []
+# print(len(list))
 
 def profitloss():
 
@@ -14,30 +17,35 @@ def profitloss():
         next(reader)
 
         for lines in reader:
-            penis = float(lines[4])
-            list.append(penis)
+            floatlines = float(lines[4])
+            list.append(floatlines)
         print(list)
         
         count = 0
         for profit in list:
-            balls = (list[count]-list[count-1])
+            difference = (list[count]-list[count-1])
             count += 1             
             
-            if balls != list[0]-list[-1]:
-                lanjiao.append(balls)
-        print(lanjiao)
-
-        for items in lanjiao:
-            if items>0:
-                Profit = "Surplus"
+            if difference != list[0]-list[-1]:
+                listdiff.append(difference)
+        print(listdiff)
+        
+        for items in listdiff:
+            if items<0:
+                negative.append(items)
             else:
-                Profit = "Deficit"
-                
-                if Profit == "Deficit":
-                    print("penis")
+                positive.append(items)
 
-                else:
-                    print("penis2")
+        if len(negative)==0:
+            return("[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY]")
+            
+        elif len(negative)>0:
+            return("Profit Deficit")
+
+
+        
+            
+                
 
                 
                 
@@ -50,17 +58,10 @@ def profitloss():
 
 
 
-        # count = 0
-        # for profit in list:
-        #     print(list[count])
-            
+        
 
 
-        #   list = float(list)
-        #   difference = list[count]-list[count-1]
-        #   print(difference)
-        # print(list[count])
-          
+       
 
 
 
