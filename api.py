@@ -7,3 +7,7 @@ print(response.json())
 data= response.json()
 Exchange_rate=float(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
 print(Exchange_rate)
+
+def exc(USD):
+    SGD=USD*Exchange_rate
+    return SGD
