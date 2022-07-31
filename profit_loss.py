@@ -28,7 +28,7 @@ def profitloss():
             if difference != list[0]-list[-1]:
                 listdiff.append(difference)
         listdiff.insert(0,0)
-        print(listdiff)
+        # print(listdiff)
         
         for items in listdiff:
             if items<0:

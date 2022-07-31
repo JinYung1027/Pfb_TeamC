@@ -1,3 +1,3 @@
 import profit_loss
 
-print(profitloss())
+print(profit_loss.profitloss())
