@@ -1,7 +1,7 @@
 from pathlib import Path
 import csv, api
 
-print(Path.cwd())
+# print(Path.cwd())
 Path = Path.cwd()/"csv_report"/"Profit and Loss.csv"
 # print(Path.exists())
 list = []
@@ -21,8 +21,8 @@ def profitloss():
             floatlines = float(lines[4])
             list.append(floatlines)
             days.append(lines[0])
-        print(days)
-        print(list)
+        # print(days)
+        # print(list)
             # print(lines[0])
         #     days.append(lines1)
         # print(days)
@@ -49,13 +49,16 @@ def profitloss():
         elif len(negative)>0:
             # print(listdiff.index(-128834.0))
             for items in negative:
+                # print(negative)
                 index = (listdiff.index(items))
-                Amount=(list[index])
+                # print(index)
                 Day=float(days[index])
                 items = abs(items)
                 items = round(api.exc(items),2)
-                print(items)
-            return f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}"
+                # print(items)
+                Profit_loss = (f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}")
+
+                print(Profit_loss)
            
 
 
