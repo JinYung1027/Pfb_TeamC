@@ -1,7 +1,7 @@
 from pathlib import Path
 import csv, api
 
-# print(Path.cwd())
+print(Path.cwd())
 Path = Path.cwd()/"csv_report"/"Profit and Loss.csv"
 # print(Path.exists())
 list = []
