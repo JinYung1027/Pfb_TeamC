@@ -82,10 +82,4 @@ def profitloss():
                 # Print the variable 'Profit_loss'
                 print(Profit_loss)
            
-
-
-       
-
-
-
 print(profitloss())
