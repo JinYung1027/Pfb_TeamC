@@ -10,11 +10,11 @@ def Overheads():
         reader = csv.reader(data)
         next(reader)
         for cost,data in reader:
-            data=float(api.exc(data))
+            data=api.exc(float(data))
             a=f"{data},{cost}"
             list.append(a)
             list.sort(reverse=True)
             highest_overhead=list[0]
-            return(highest_overhead())
+            
 
 print(Overheads())
