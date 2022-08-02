@@ -14,6 +14,10 @@ Exchange_rate=float(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
 
 # Create a function called "exc" with a parameter "USD" to convert the USD to SGD
 def exc(USD):
+    """
+    - This function is to convert USD to SGD
+    - Input a number in the parameter to convert USD to SGD
+    """
 
     # Do a converting by multiplying the exchange rate with the parameter input
     SGD=USD*Exchange_rate
