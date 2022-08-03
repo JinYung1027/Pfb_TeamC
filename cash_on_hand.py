@@ -8,11 +8,7 @@ for csvdata in csv_filepath.glob('Cash on Hand.csv'):
         
     with csvdata.open(mode = 'r' , encoding= 'UTF-8') as file:
 
-<<<<<<< HEAD
-#coh()
-=======
         x = 0
->>>>>>> 2d57dbb5163acbb0785c3129287b1740007fcf22
 
         data = file.read()
 
