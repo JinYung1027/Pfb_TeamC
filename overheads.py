@@ -56,5 +56,4 @@ def Overheads():
                     #return the value for the function Overheads.
                     return[(f"[HIGHEST OVERHEADS] {c} : SGD{b}")]
             
-
-#print(Overheads())
+Overheads()

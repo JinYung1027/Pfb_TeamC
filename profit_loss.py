@@ -92,4 +92,4 @@ def profitloss():
             return(Penis)
                 
            
-#print(profitloss())
+profitloss()

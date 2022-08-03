@@ -53,7 +53,7 @@ def cashonhand():
                     
                 x = x + 1
 
-# print(cashonhand())
+cashonhand()
 
                 
 
