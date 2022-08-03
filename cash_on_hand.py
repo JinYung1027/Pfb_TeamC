@@ -1,5 +1,6 @@
 from pathlib import Path
 import re, csv , api
+from profit_loss import profitloss
 
 csv_filepath = Path.cwd()/'csv_report'
 
@@ -27,7 +28,7 @@ def cashonhand():
 
             if cash == cashsort:
                 
-                return('[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
+                print('[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
 
             else:
                 
@@ -43,14 +44,14 @@ def cashonhand():
 
                         deficit = round(deficit , 2)
 
-                        return(f'[CASH DEFICIT] DAY: {float(startday) + x + 1} , AMOUNT: SGD{deficit}')
+                        print(f'[CASH DEFICIT] DAY: {float(startday) + x + 1} , AMOUNT: SGD{deficit}')
 
                         
 
                     
                     x = x + 1
 
-                
+print(cashonhand())
 
                 
 
