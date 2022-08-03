@@ -13,6 +13,7 @@ listdiff = []
 negative = []
 # Create list 'days' to contain Days from csv file
 days = []
+Penis = []
 
 # Define function
 def profitloss():
@@ -82,6 +83,6 @@ def profitloss():
                 # Assign the final statement into the variable 'Profit_loss'
                 Profit_deficit = (f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}")
                 # Print the variable 'Profit_loss'
-                return(Profit_deficit)
+                print(Profit_deficit)
            
-# print(profitloss())
+print(profitloss())
