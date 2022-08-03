@@ -28,7 +28,7 @@ def cashonhand():
 
             if cash == cashsort:
                 
-                print('[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
+                return('[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
 
             else:
                 
@@ -44,12 +44,15 @@ def cashonhand():
 
                         deficit = round(deficit , 2)
 
-                        print(f'[CASH DEFICIT] DAY: {float(startday) + x + 1} , AMOUNT: SGD{deficit}')
+                        cd=[(f'[CASH DEFICIT] DAY: {float(startday) + x + 1} , AMOUNT: SGD{deficit}')]
 
-                        
+                        for c in cd:
+                            datas.append(c)
+                            
+                    return datas
 
                     
-                    x = x + 1
+                x = x + 1
 
 print(cashonhand())
 
