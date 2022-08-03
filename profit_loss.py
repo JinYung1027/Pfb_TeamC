@@ -81,8 +81,11 @@ def profitloss():
                 # Use function created in imported module to convert the values from USD into SGD
                 items = round(api.exc(items),2)
                 # Assign the final statement into the variable 'Profit_loss'
-                Profit_deficit = (f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}")
+                Profit_deficit = [(f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}")]
                 # Print the variable 'Profit_loss'
-                print(Profit_deficit)
+                for i in Profit_deficit:
+                    Penis.append(i)
+            return(Penis)
+                
            
-print(profitloss())
+#print(profitloss())

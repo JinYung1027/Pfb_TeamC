@@ -12,7 +12,7 @@ def coh():
         for text in reader:
             print(text)
 
-coh()
+#coh()
 
 
 
