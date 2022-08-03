@@ -1,6 +1,5 @@
 from pathlib import Path
 import re, csv , api
-from profit_loss import profitloss
 
 csv_filepath = Path.cwd()/'csv_report'
 
@@ -47,9 +46,9 @@ def cashonhand():
                         cd=[(f'[CASH DEFICIT] DAY: {float(startday) + x + 1} , AMOUNT: SGD{deficit}')]
 
                         for c in cd:
-                            datas.append(c)
+                            datas.append(c + "\n")
                             
-                    return datas
+                return datas
 
                     
                 x = x + 1
