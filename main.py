@@ -3,7 +3,7 @@ import api, overheads, profit_loss,cash_on_hand, csv
 from pathlib import Path
 
 # Create a file path to the new file named "summary_report.csv" in the current working directory.
-fp = Path.cwd()/"summary_report.csv"
+fp = Path.cwd()/"summary_report.txt"
 
 # Create the file "summary_report.csv" in current working directory using .touch() method
 fp.touch()
