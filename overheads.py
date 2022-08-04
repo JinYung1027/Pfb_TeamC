@@ -1,59 +1,63 @@
 from pathlib import Path
 import csv,re,api
 
-#creating a variable to access overheads csv file. 
+#creating a file path to access overheads csv file. 
 file_path = Path.cwd()/"csv_report"/"Overheads.csv"
 
-#creating an empty set.
+#create empty lists.
 list = []
 list2= []
 
-#creating a function "overheads" to run the code.
+#creating a function "overheads" to find the highest overhead expense
 def Overheads():
+
+    """
+    - This function is to find the highest overhead expense in the game
+    """
 
     #using file_path function to read the lines of csv file.
     with file_path.open(mode = "r", encoding = "UTF-8") as data:
 
-        #creating a variable to read CSV File.
+        # Create a reader object using read() method
         reader = csv.reader(data)
 
-        #function to skip the header in the CSV file.
+        # next function to skip the header in the CSV file.
         next(reader)
 
-        #to assess the data in reader.
+        # Using for loop to assess the data in reader.
         for cost,data in reader:
 
-            #creating a variable to access the api file.
+            # Convert the data from USD to SGD by using the function created in api.py
             data=api.exc(float(data))
 
-            #rearrange the overheads with catagory 
+            #rearrange the data to a number first sequence for sorting later
             a=f"{data},{cost.upper()}"
 
-            #appending data into list
+            #append data into a list
             list.append(a)
 
             #sorting list in a reverse order, from largest to smallest.
             list.sort(reverse=True)
 
-            #The highest overhead in the game.
+            #access to the highest overhead in the game by accessing to the first data.
             highest_overhead=list[0]
 
-            #Creating variable to find all percentages
+            # Create a variable to find the amount of the highest overhead expense
             amount = re.findall(pattern="[0-9].+[0-9]",string=highest_overhead)
 
-            #creating variable to find all expenses
+            # Create a variable to find the expense of the highest overhead expense
             expense = re.findall(pattern="[A-Z].+[A-Z]",string=highest_overhead)
 
-            #for function to access amount variable.
+            #for loop to extract data needed from the two variable
             for b in amount:
 
-                #rounding float b to 2 decimal places. 
+                # convert b to float and round it into 2 d.p. 
                 b = round(float(b),2)
 
-                #for function to access the expense variable.
+                # for function to access the expense variable.
                 for c in expense:
 
-                    #return the value for the function Overheads.
+                    # return the value for the function Overheads.
                     return[(f"[HIGHEST OVERHEADS] {c} : SGD{b}")]
             
 Overheads()

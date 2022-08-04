@@ -1,6 +1,5 @@
 from pathlib import Path
 import csv, api
-from tkinter import N
 
 # Create file path and extend to "csv_report" and "Profit and Loss.csv"
 Path = Path.cwd()/"csv_report"/"Profit and Loss.csv"
@@ -14,7 +13,7 @@ listdiff = []
 negative = []
 # Create list 'days' to contain Days from csv file
 days = []
-Penis = []
+PL=[]
 
 # Define function
 def profitloss():
@@ -85,11 +84,11 @@ def profitloss():
                 Profit_deficit = ([f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}"])
                 # Print the variable 'Profit_loss'
                 for i in Profit_deficit:
-                    Penis.append(i)
+                    PL.append(i)
 
                     
                     
                     
-            return(Penis)
+            return(PL)
                 
            
