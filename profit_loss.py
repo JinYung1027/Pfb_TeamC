@@ -13,6 +13,7 @@ listdiff = []
 negative = []
 # Create list 'days' to contain Days from csv file
 days = []
+# Create list 'PL' to store the all possible outcome
 PL=[]
 
 # Define function
@@ -82,13 +83,13 @@ def profitloss():
                 items = round(api.exc(items),2)
                 # Assign the final statement into the variable 'Profit_loss'
                 Profit_deficit = ([f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}"])
-                # Print the variable 'Profit_loss'
+                # for loop to append all possible outcome in this 'PL' list
                 for i in Profit_deficit:
                     PL.append(i)
 
                     
                     
-                    
+            # return the list
             return(PL)
                 
            
