@@ -43,7 +43,7 @@ def cashonhand():
 
                         deficit = round(deficit , 2)
 
-                        cd=[(f'[CASH DEFICIT] DAY: {float(startday) + x + 1} , AMOUNT: SGD{deficit}')]
+                        cd=([f'[CASH DEFICIT] DAY: {float(startday) + x + 1} , AMOUNT: SGD{deficit}'])
 
                         for c in cd:
                             datas.append(c)
