@@ -64,7 +64,7 @@ def profitloss():
         # If there are no items in the list 'negative', it means that the net profit is consecutively higher
         if len(negative)==0:
             # Create a variable to store "[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY]"
-            Profit_surplus="[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY"
+            Profit_surplus=["[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY"]
             # Return the message from Profit_surplus
             return(Profit_surplus)
             
