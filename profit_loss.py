@@ -85,11 +85,13 @@ def profitloss():
                 Profit_deficit = [(f"[PROFIT DEFICIT] DAY : {Day}, AMOUNT : SGD{items}")]
                 # Print the variable 'Profit_loss'
                 for i in Profit_deficit:
-                    Penis.append(i + "\n")
+                    print(i)
+                    Penis.append(i)
+
                     
                     
                     
             return(Penis)
                 
            
-profitloss()
+#print(profitloss())
