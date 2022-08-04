@@ -58,6 +58,6 @@ def Overheads():
                 for c in expense:
 
                     # return the value for the function Overheads.
-                    return[(f"[HIGHEST OVERHEADS] {c} : SGD{b}")]
+                    return(f"[HIGHEST OVERHEADS] {c} : SGD{b}")
             
 Overheads()
