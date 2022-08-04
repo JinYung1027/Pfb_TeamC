@@ -51,7 +51,6 @@ def cashonhand():
                 return datas
 
                     
-                x = x + 1
 
 cashonhand()
 
