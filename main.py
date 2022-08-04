@@ -2,22 +2,27 @@
 import api, overheads, profit_loss,cash_on_hand, csv
 from pathlib import Path
 
+
+def main():
+
 # Create a file path to the new file named "summary_report.csv" in the current working directory.
-fp = Path.cwd()/"summary_report.txt"
+    fp = Path.cwd()/"summary_report.txt"
 
 # Create the file "summary_report.csv" in current working directory using .touch() method
-fp.touch()
+    fp.touch()
 
 # Open the csv file in write mode by using the .open() method
-with fp.open(mode="w",encoding="UTF-8",newline="") as file:
+    with fp.open(mode="w",encoding="UTF-8",newline="") as file:
 
-    # Create a write object and name it as "writer" using csv.writer() from csv module
-    writer=csv.writer(file)
-    # Use .writerow() to write all the datas into the csv file
-    writer.writerow([f"[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{api.Exchange_rate}"])
-    writer.writerow(overheads.Overheads())
+        file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{api.Exchange_rate}" + "\n")
+        file.write(overheads.Overheads())
+        file.write("\n")
     # Use for loop to write the data that might have one or more outcome
-    for rows in profit_loss.profitloss():
-        writer.writerow([rows])
-    for rows1 in cash_on_hand.cashonhand():
-        writer.writerow([rows1])
+        for rows in profit_loss.profitloss():
+            file.write(rows)
+            file.write("\n")
+        for rows1 in cash_on_hand.cashonhand():
+            file.write(rows1)
+            file.write("\n")
+
+main()
