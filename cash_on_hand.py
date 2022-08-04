@@ -50,11 +50,7 @@ def cashonhand():
             # Using if statement to determine if there is a cash surplus or not
             if cash == cashsort:
                 
-            """
-            IF CASH ON HAND IS CONSECUTIVELY INCREASING EVERYDAY,
-            SORTING cash IN ASCENDING ORDER WOULD GET YOU THE SAME SEQUENCE AS cash.
-            THEREFORE cash == cashsort IF THERE IS A SURPLUS
-            """
+
                 # Printing the statement for cash surplus if there is a cash surplus
                 return(['[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY'])
 
