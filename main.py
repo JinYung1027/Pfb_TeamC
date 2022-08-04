@@ -18,9 +18,9 @@ def main():
         file.write(overheads.Overheads() + "\n")
     # Use for loop to write the data that might have one or more outcome
         for rows1 in cash_on_hand.cashonhand():
-            file.write(rows1 + "\n")
+            file.write(f"{rows1}" + "\n")
         for rows in profit_loss.profitloss():
-            file.write(rows + "\n")
+            file.write(f"{rows}" + "\n")
 
 
 main()

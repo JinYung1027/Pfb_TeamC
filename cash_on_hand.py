@@ -15,9 +15,15 @@ def cashonhand():
 
             datas = []
 
-            cash = re.findall(pattern=r'[0-9][0-9][0-9]+' , string=data)
+            cash = re.findall(pattern=r'[0-9][0-9][0-9].+' , string=data)
 
-            cashsort = re.findall(pattern=r'[0-9][0-9][0-9]+' , string=data)
+            # List comprehension to convert the data into float
+            cash = [float(n) for n in cash]
+
+            cashsort = re.findall(pattern=r'[0-9][0-9][0-9].+' , string=data)
+
+            # List comprehension to convert the data into float
+            cashsort = [float(p) for p in cashsort]
 
             cashsort.sort()
 
@@ -27,7 +33,7 @@ def cashonhand():
 
             if cash == cashsort:
                 
-                return('[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
+                return(['[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY'])
 
             else:
                 
