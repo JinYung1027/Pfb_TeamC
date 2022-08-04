@@ -30,7 +30,7 @@ def Overheads():
             # Convert the data from USD to SGD by using the function created in api.py
             data=api.exc(float(data))
 
-            #rearrange the data to a number first sequence for sorting later
+            #rearrange the data to show the number before their expense for sorting later
             a=f"{data},{cost.upper()}"
 
             #append data into a list
