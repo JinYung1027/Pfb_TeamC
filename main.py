@@ -12,17 +12,18 @@ def main():
     fp.touch()
 
 # Open the csv file in write mode by using the .open() method
-    with fp.open(mode="w",encoding="UTF-8",newline="") as file:
+    with fp.open(mode="w") as file:
 
         file.write(f"[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{api.Exchange_rate}" + "\n")
         file.write(overheads.Overheads())
         file.write("\n")
     # Use for loop to write the data that might have one or more outcome
-        for rows in profit_loss.profitloss():
-            file.write(rows)
-            file.write("\n")
         for rows1 in cash_on_hand.cashonhand():
             file.write(rows1)
             file.write("\n")
+        for rows in profit_loss.profitloss():
+            file.write(rows)
+            file.write("\n")
+
 
 main()
